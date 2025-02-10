@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechner-Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Rechner-Tutorial</h1>
+    </header>
+    
+    <h1>Tutorial Rechner</h1>
+
+    <div class="calculator">
+        <form action="rechner.php" method="POST">
+            <input type="number" name="number1" placeholder="Zahl 1 eingeben" required>
+            <select name="operation" required>
+                <option value="add">Addition (+)</option>
+                <option value="subtract">Subtraktion (-)</option>
+                <option value="multiply">Multiplikation (*)</option>
+                <option value="divide">Division (/)</option>
+            </select>
+            <input type="number" name="number2" placeholder="Zahl 2 eingeben" required>
+            <button type="submit">Berechnen</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 github (marti99-lab)
+    </footer>
+
+</body>
+</html>
