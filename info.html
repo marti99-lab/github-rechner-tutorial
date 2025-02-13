@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info & Dokumentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Info & Dokumentation</h1>
+        <nav class="nav-tabs">
+            <button onclick="ladeMarkdown('README.md')">📖 README</button>
+            <button onclick="ladeMarkdown('DOKUMENTATION.md')">📄 Dokumentation</button>
+            <a href="index.html">⬅️ Zurück zum Rechner</a>
+        </nav>
+    </header>
+
+    <div id="markdown-container" class="markdown-container">Wähle eine Datei zum Anzeigen.</div>
+
+    <footer>
+        &copy; 2025 github (marti99-lab)
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="info.js"></script>
+
+</body>
+</html>
