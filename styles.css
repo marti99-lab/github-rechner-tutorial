@@ -74,6 +74,52 @@ button:hover {
     background: linear-gradient(135deg, #25665e, #1f5450);
 }
 
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.nav-tabs button {
+    background: linear-gradient(135deg, #2c7a7b, #25665e);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.nav-tabs button:hover {
+    background: linear-gradient(135deg, #25665e, #1f5450);
+}
+
+.markdown-container {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #fff;
+    border: 1px solid #b2d4cc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.markdown-container h1, .markdown-container h2 {
+    color: #2c7a7b;
+}
+
+.markdown-container p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #333;
+}
+
 footer {
     background: linear-gradient(135deg, #25665e, #1f5450);
     color: #fff;
