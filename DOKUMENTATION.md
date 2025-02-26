@@ -113,11 +113,27 @@ Um das Projekt ohne einen Webserver direkt zu testen, kannst du die **Live Serve
 
 ## ✅ Abschluss und Erweiterungsmöglichkeiten
 
-Herzlichen Glückwunsch! 🎉 Du hast einen funktionierenden Rechner erstellt.  
-Mögliche Erweiterungen:
-- 🎨 **Besseres Styling mit CSS**
-- 📝 **Speicherung der Berechnungen**
-- 📱 **Optimierung für Mobilgeräte**
+# Erweiterungen des Rechners 🚀
+
+In diesem Update wurden folgende Features hinzugefügt:
+
+## 🔢 Neue mathematische Funktionen
+- Quadratwurzel (√x)
+- Potenz (x^y)
+- Prozentrechnung (x% von y)
+- Logarithmus (log(x))
+- Sinus, Kosinus, Tangens (sin, cos, tan)
+
+## 📜 Ergebnis-Historie
+- Speichert bis zu **10 Berechnungen**
+- Anzeige unterhalb des Rechners
+- **Löschfunktion** zum Zurücksetzen der Historie
+
+## ⌨️ Tastatureingabe
+- **Enter-Taste** startet Berechnung
+
+## 🎨 Design-Anpassung
+- **Historie hat jetzt die gleiche Breite** wie der Rechner für ein einheitliches Layout
 
 ---
 
@@ -126,3 +142,4 @@ Mögliche Erweiterungen:
 📌 **Lizenz:** Open Source  
 
 ---
+
