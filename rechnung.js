@@ -1,3 +1,11 @@
+let memoryValue = 0;
+
+function getDisplayedResult() {
+    let resultText = document.getElementById("result-text").textContent;
+    let resultNumber = parseFloat(resultText.replace("Ergebnis: ", "").trim());
+    return isNaN(resultNumber) ? 0 : resultNumber;
+}
+
 function berechne() {
     let number1 = parseFloat(document.getElementById("number1").value);
     let number2 = parseFloat(document.getElementById("number2").value);
@@ -50,6 +58,63 @@ function berechne() {
     document.getElementById("result-text").textContent = `Ergebnis: ${result}`;
     speichereInHistorie(`${number1} ${operation} ${number2} = ${result}`);
 }
+
+function getDisplayedResult() {
+    let resultText = document.getElementById("result-text").textContent;
+    let resultNumber = parseFloat(resultText.replace("Ergebnis: ", "").trim());
+    return isNaN(resultNumber) ? 0 : resultNumber;
+}
+
+function memoryAdd() {
+    memoryValue += getDisplayedResult();
+    console.log("M+ Memory Value:", memoryValue);
+}
+
+function memorySubtract() {
+    memoryValue -= getDisplayedResult();
+    console.log("M- Memory Value:", memoryValue);
+}
+
+function memoryRecall() {
+    document.getElementById("result-text").textContent = `Ergebnis: ${memoryValue}`;
+    console.log("MR Memory Recall:", memoryValue);
+}
+
+function memoryClear() {
+    memoryValue = 0;
+    console.log("MC Memory Cleared");
+}
+
+function updateMemoryDisplay() {
+    document.getElementById("memory-display").textContent = `Memory: ${memoryValue}`;
+}
+
+function memoryAdd() {
+    memoryValue += getDisplayedResult();
+    updateMemoryDisplay();
+    console.log("M+ Memory Value:", memoryValue);
+}
+
+function memorySubtract() {
+    memoryValue -= getDisplayedResult();
+    updateMemoryDisplay();
+    console.log("M- Memory Value:", memoryValue);
+}
+
+function memoryRecall() {
+    document.getElementById("result-text").textContent = `Ergebnis: ${memoryValue}`;
+    console.log("MR Memory Recall:", memoryValue);
+}
+
+function memoryClear() {
+    memoryValue = 0;
+    updateMemoryDisplay();
+    console.log("MC Memory Cleared");
+}
+
+window.onload = function() {
+    updateMemoryDisplay();
+};
 
 function speichereInHistorie(bericht) {
     let historie = JSON.parse(localStorage.getItem("berechnungsHistorie")) || [];

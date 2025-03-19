@@ -135,6 +135,15 @@ In diesem Update wurden folgende Features hinzugefügt:
 ## 🎨 Design-Anpassung
 - **Historie hat jetzt die gleiche Breite** wie der Rechner für ein einheitliches Layout
 
+## 📜 Neue Speicherfunktionen (Memory-Funktionen)
+
+    M+ (Add to Memory) → Speichert das aktuelle Ergebnis in den Speicher.
+    M- (Subtract from Memory) → Subtrahiert das aktuelle Ergebnis vom gespeicherten Wert.
+    MR (Memory Recall) → Ruft den gespeicherten Wert ab und zeigt ihn als Ergebnis an.
+    MC (Memory Clear) → Löscht den gespeicherten Wert und setzt den Speicher zurück.
+
+Diese Funktionen ermöglichen eine bessere Nachverfolgung und Wiederverwendung von Berechnungen. 
+
 ---
 
 ✏ **Autor:** marti99-lab  

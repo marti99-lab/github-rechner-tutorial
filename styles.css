@@ -13,11 +13,10 @@ header {
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
     padding-top: 70px;
     background: linear-gradient(135deg, #fff, #e0f7f4);
     color: #333;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +34,9 @@ h1 {
     background: #fff;
     padding: 25px;
     border-radius: 12px;
+    margin-bottom: 10px;
     width: 320px;
+    max-width: 100%;   
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid #b2d4cc;
     text-align: center;
@@ -72,6 +73,25 @@ button {
 
 button:hover {
     background: linear-gradient(135deg, #25665e, #1f5450);
+}
+
+.calc-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.memory-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 10px;
+}
+
+.memory-buttons button {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
 }
 
 .nav-tabs {
@@ -121,13 +141,13 @@ button:hover {
 }
 
 .history-container {
-    margin-top: 20px;
     padding: 15px;
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 320px;
     box-sizing: border-box; 
+    margin-bottom: 35px;
     width: 100%;
     text-align: center;
 }
@@ -175,4 +195,43 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input[type="number"],
+    select,
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.nav-tabs button {
+    background: linear-gradient(135deg, #2c7a7b, #25665e);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.nav-tabs button:hover {
+    background: linear-gradient(135deg, #25665e, #1f5450);
 }

@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rechner-Tutorial</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <header>
-      <h1>Rechner-Tutorial</h1>
-      <nav class="nav-tabs">
-          <a href="info.html">ℹ️ Info & Dokumentation</a>
-      </nav>
-  </header>
+        <h1>Rechner-Tutorial</h1>
+        <nav class="nav-tabs">
+            <a href="info.html">ℹ️ Info & Dokumentation</a>
+        </nav>
+    </header>
 
     <h1>Tutorial Rechner</h1>
 
     <div class="calculator">
-      <input
-        type="number"
-        id="number1"
-        placeholder="Zahl 1 eingeben"
-        required
-      />
-      <select id="operation" required>
-        <option value="add">Addition (+)</option>
-        <option value="subtract">Subtraktion (-)</option>
-        <option value="multiply">Multiplikation (*)</option>
-        <option value="divide">Division (/)</option>
-        <option value="sqrt">Quadratwurzel (√)</option>
-        <option value="power">Potenz (x^y)</option>
-        <option value="percent">Prozent (%)</option>
-        <option value="log">Logarithmus (log)</option>
-        <option value="sin">Sinus (sin)</option>
-        <option value="cos">Kosinus (cos)</option>
-        <option value="tan">Tangens (tan)</option>
-    </select>
-      <input
-        type="number"
-        id="number2"
-        placeholder="Zahl 2 eingeben"
-        required
-      />
-      <button onclick="berechne()">Berechnen</button>
+        <input type="number" id="number1" placeholder="Zahl 1 eingeben" required />
+        
+        <select id="operation" required>
+            <option value="add">Addition (+)</option>
+            <option value="subtract">Subtraktion (-)</option>
+            <option value="multiply">Multiplikation (*)</option>
+            <option value="divide">Division (/)</option>
+            <option value="sqrt">Quadratwurzel (√)</option>
+            <option value="power">Potenz (x^y)</option>
+            <option value="percent">Prozent (%)</option>
+            <option value="log">Logarithmus (log)</option>
+            <option value="sin">Sinus (sin)</option>
+            <option value="cos">Kosinus (cos)</option>
+            <option value="tan">Tangens (tan)</option>
+        </select>
 
-      <div class="result-box">
-        <h2>Ergebnis:</h2>
-        <p id="result-text"></p>
+        <input type="number" id="number2" placeholder="Zahl 2 eingeben" required />
+        
+        <button class="calc-button" onclick="berechne()">Berechnen</button>
+
+        <div class="memory-buttons">
+            <button onclick="memoryAdd()">M+</button>
+            <button onclick="memorySubtract()">M-</button>
+            <button onclick="memoryRecall()">MR</button>
+            <button onclick="memoryClear()">MC</button>
+        </div>
+
+        <div class="result-box">
+            <h2>Ergebnis:</h2>
+            <p id="result-text"></p>
+        </div>
+
+        <div class="memory-container">
+          <h3 id="memory-display">Memory: 0</h3>
       </div>
+      
     </div>
 
     <div class="history-container">
-      <h2>Ergebnis-Historie</h2>
-      <ul id="history-list"></ul>
-  </div>
+        <h2>Ergebnis-Historie</h2>
+        <ul id="history-list"></ul>
+    </div>
 
-  <div class="history-container">
-    <h2>Historie Löschen</h2>
-    <ul id="history-list"></ul>
-    <button onclick="loescheHistorie()">Historie löschen</button>
-</div>
-
-
-    <div id="markdown-content" class="markdown-container hidden"></div>
+    <div class="history-container">
+        <h2>Historie Löschen</h2>
+        <button onclick="loescheHistorie()">Historie löschen</button>
+    </div>
 
     <footer>&copy; 2025 github (marti99-lab)</footer>
 
-    <!-- Externe JavaScript-Datei zur besseren Übersicht -->
     <script src="rechnung.js"></script>
-  </body>
+</body>
 </html>

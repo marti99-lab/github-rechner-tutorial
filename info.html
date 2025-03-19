@@ -1,30 +1,77 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info & Dokumentation</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rechner-Tutorial</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>Info & Dokumentation</h1>
-        <nav class="nav-tabs">
-            <button onclick="ladeMarkdown('README.md')">📖 README</button>
-            <button onclick="ladeMarkdown('DOKUMENTATION.md')">📄 Dokumentation</button>
-            <a href="index.html">⬅️ Zurück zum Rechner</a>
-        </nav>
-    </header>
+      <h1>Rechner-Tutorial</h1>
+      <nav class="nav-tabs">
+          <a href="info.html">ℹ️ Info & Dokumentation</a>
+      </nav>
+  </header>
 
-    <div id="markdown-container" class="markdown-container">Wähle eine Datei zum Anzeigen.</div>
+    <h1>Tutorial Rechner</h1>
 
-    <footer>
-        &copy; 2025 github (marti99-lab)
-    </footer>
+    <div class="calculator">
+      <input
+        type="number"
+        id="number1"
+        placeholder="Zahl 1 eingeben"
+        required
+      />
+      <select id="operation" required>
+        <option value="add">Addition (+)</option>
+        <option value="subtract">Subtraktion (-)</option>
+        <option value="multiply">Multiplikation (*)</option>
+        <option value="divide">Division (/)</option>
+        <option value="sqrt">Quadratwurzel (√)</option>
+        <option value="power">Potenz (x^y)</option>
+        <option value="percent">Prozent (%)</option>
+        <option value="log">Logarithmus (log)</option>
+        <option value="sin">Sinus (sin)</option>
+        <option value="cos">Kosinus (cos)</option>
+        <option value="tan">Tangens (tan)</option>
+    </select>
+      <input
+        type="number"
+        id="number2"
+        placeholder="Zahl 2 eingeben"
+        required
+      />
+      <button onclick="berechne()">Berechnen</button>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="info.js"></script>
+      <div class="memory-buttons">
+        <button onclick="memoryAdd()">M+</button>
+        <button onclick="memorySubtract()">M-</button>
+        <button onclick="memoryRecall()">MR</button>
+        <button onclick="memoryClear()">MC</button>
+      </div>
 
-</body>
+      <div class="result-box">
+        <h2>Ergebnis:</h2>
+        <p id="result-text"></p>
+      </div>
+    </div>
+
+    <div class="history-container">
+      <h2>Ergebnis-Historie</h2>
+      <ul id="history-list"></ul>
+  </div>
+
+  <div class="history-container">
+    <h2>Historie Löschen</h2>
+    <ul id="history-list"></ul>
+    <button onclick="loescheHistorie()">Historie löschen</button>
+</div>
+
+    <div id="markdown-content" class="markdown-container hidden"></div>
+
+    <footer>&copy; 2025 github (marti99-lab)</footer>
+
+    <script src="rechnung.js"></script>
+  </body>
 </html>
